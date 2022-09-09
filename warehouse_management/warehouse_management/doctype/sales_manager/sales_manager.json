@@ -1,0 +1,99 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "SM-.#####",
+ "creation": "2022-09-05 11:02:41.716889",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_name",
+  "qantity_sold",
+  "price",
+  "buyer_name",
+  "paid",
+  "amended_from",
+  "qantity_left",
+  "date"
+ ],
+ "fields": [
+  {
+   "fieldname": "item_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Item Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "qantity_sold",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Qantity Sold",
+   "reqd": 1
+  },
+  {
+   "fieldname": "price",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Price",
+   "reqd": 1
+  },
+  {
+   "fieldname": "buyer_name",
+   "fieldtype": "Data",
+   "label": "Buyer Name"
+  },
+  {
+   "fieldname": "paid",
+   "fieldtype": "Int",
+   "label": "Paid",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Sales Manager",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "qantity_left",
+   "fieldtype": "Data",
+   "label": "Qantity Left",
+   "read_only": 1
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "label": "Date"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-09-07 17:25:01.261341",
+ "modified_by": "Administrator",
+ "module": "Warehouse Management",
+ "name": "Sales Manager",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
