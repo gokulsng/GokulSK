@@ -1,0 +1,97 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "RN-.#####",
+ "creation": "2022-09-12 11:10:12.984483",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "item_name",
+  "buyer_name",
+  "qantity_return",
+  "qantity_sold",
+  "price",
+  "date",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fetch_if_empty": 1,
+   "fieldname": "item_name",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Item Name",
+   "options": "Item Manager",
+   "reqd": 1
+  },
+  {
+   "fieldname": "buyer_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Buyer Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "qantity_return",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Qantity Return",
+   "reqd": 1
+  },
+  {
+   "fieldname": "price",
+   "fieldtype": "Float",
+   "label": "Price",
+   "read_only": 1
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Return Manager",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "qantity_sold",
+   "fieldtype": "Int",
+   "label": "Qantity Sold",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2022-09-12 15:52:39.608765",
+ "modified_by": "Administrator",
+ "module": "Warehouse Management",
+ "name": "Return Manager",
+ "naming_rule": "Expression (old style)",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

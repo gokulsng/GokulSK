@@ -16,6 +16,23 @@ class StockManager(Document):
 				self.qantity_left=self.qantity_left-qantity_sold
 				self.buyer_name= buyer_name
 				self.date=date
+			elif self.doctypename=="Return Manager":
+				item_name ,qantity_return,qantity_sold,buyer_name,date= frappe.db.get_value('Return Manager', self.id, ['item_name', 'qantity_return','qantity_sold','buyer_name','date'])
+				self.item_name= item_name
+				self.qantity_return= qantity_return
+				self.qantity_sold= qantity_sold
+				qantity_left= frappe.db.get_value('Stock Manager',{"item_name":self.item_name},"qantity_left")
+				self.qantity_left=self.qantity_left+qantity_return
+				self.buyer_name= buyer_name
+				self.date=date
+			elif self.doctypename=="Purchase Return Manager":
+				item_name ,qantity_return,qantity_left,seller_name,date= frappe.db.get_value('Purchase Return Manager', self.id, ['item_name', 'qantity_return','qantity_left','seller_name','date'])
+				self.item_name= item_name
+				self.qantity_return= qantity_return
+				qantity_left= frappe.db.get_value('Stock Manager',{"item_name":self.item_name},"qantity_left")
+				self.qantity_left=qantity_left-qantity_return
+				self.seller_name= seller_name
+				self.date=date
 			else:
 				item_name ,qantity_left,qantity_bought ,seller_name,date= frappe.db.get_value('Purchase Manager', self.id, ['item_name', 'qantity_left','qantity_bought','seller_name','date'])
 				self.item_name= item_name
